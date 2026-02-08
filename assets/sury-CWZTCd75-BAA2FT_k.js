@@ -1,1 +1,0 @@
-import{_ as a,M as e}from"./index-B6vkcAOa.js";async function n(){try{const{toJSONSchema:t}=await a(async()=>{const{toJSONSchema:r}=await import("./standard-json_false-BdDTKVgV.js");return{toJSONSchema:r}},[]);return t}catch{throw new e("sury")}}export{n as default};

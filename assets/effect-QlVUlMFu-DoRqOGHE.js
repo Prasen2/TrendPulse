@@ -1,0 +1,1 @@
+import{_ as a,M as r}from"./index-CfJrbxJO.js";async function o(){try{const{JSONSchema:t}=await a(async()=>{const{JSONSchema:e}=await import("./standard-json_false-DISwR4lm.js");return{JSONSchema:e}},[]);return e=>t.make(e)}catch{throw new r("effect")}}export{o as default};
