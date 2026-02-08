@@ -32,7 +32,7 @@ The platform features:
    - **Trend Velocity Meter**: Monitor acceleration/deceleration of trending topics with historical trend lines
    - **Topic Summary Panel**: AI-generated summaries of research topics
 
-### 3. **Research Copilot (AI-Powered Research)**
+### 3. **Research Copilot**
    - **Smart Research Intent Processing**: Submit natural language queries for instant analysis
    - **Topic Summaries**: Comprehensive overviews of trending topics
    - **Keyword Extraction**: Automatically identify relevant keywords and concepts
@@ -110,6 +110,7 @@ export function TrendingTopicsList({ topics }: TrendingTopicsListProps) {
 }
 ```
 
+
 ### Tambo's Role in TrendPulse
 
 | Responsibility | How Tambo Implements It |
@@ -143,6 +144,8 @@ const handleResearchSubmit = async (query: string) => {
   });
 }
 ```
+
+
 
 ---
 
@@ -198,26 +201,6 @@ graph TB
     E -.->|Future Integration| G
     E -.->|Future Integration| H
     C -.->|Future Integration| I
-```
-
-### Component Hierarchy
-
-```
-App (Entry Point)
-├── TrendPulsePage1 (Dashboard - Page 1)
-│   ├── IntroSection
-│   ├── GlobeContainer
-│   │   └── Globe.gl (Three.js visualization)
-│   ├── TrendingTopicsList
-│   ├── PlatformDistributionPanel
-│   └── TrendVelocityPanel
-│
-└── ResearchCopilotPage (Research - Page 2)
-    ├── ResearchInputPanel
-    ├── TopicSummaryPanel
-    ├── KeyKeywordsPanel
-    ├── VideoAnglesPanel
-    └── ResearchStatusPanel
 ```
 
 ---
@@ -312,69 +295,17 @@ graph LR
 ## 📸 Screenshots & Demo
 
 ### Page 1: Trend Monitoring Dashboard
-```
-┌─────────────────────────────────────────────────┐
-│         TrendPulse - Trend Monitoring           │
-├─────────────────────────────────────────────────┤
-│                                                 │
-│  ⚙️ [Settings]                [Research Now →] │
-│                                                 │
-│  ╔═════════════════════════════════════════╗   │
-│  ║                                         ║   │
-│  ║    🌍 Interactive 3D Globe             ║   │
-│  ║    (Trend hotspots visualized)         ║   │
-│  ║                                         ║   │
-│  └═════════════════════════════════════════┘   │
-│                                                 │
-│  ┌─────────────────────────────────────────┐   │
-│  │ 📊 Trending Topics                      │   │
-│  │ 1. AI Safety → Tech | ↗ 95 pts         │   │
-│  │ 2. Climate Data → News | ↘ 87 pts      │   │
-│  │ 3. Gaming Trends → Entertainment |...  │   │
-│  └─────────────────────────────────────────┘   │
-│                                                 │
-│  ┌────────────┬────────────┐                   │
-│  │ Platform   │ Velocity   │                   │
-│  │ YouTube31% │ ↗ Rising   │                   │
-│  │ Twitter 26%│ +18% change│                   │
-│  │ Reddit 23% │            │                   │
-│  │ News  20%  │ [chart]    │                   │
-│  └────────────┴────────────┘                   │
-└─────────────────────────────────────────────────┘
-```
+- Interactive 3D globe with trend hotspots visualization
+- Real-time trending topics with category badges and velocity indicators
+- Platform distribution analysis across YouTube, Twitter/X, Reddit, and News
+- Trend velocity meter showing acceleration/deceleration metrics
 
 ### Page 2: Research Copilot
-```
-┌─────────────────────────────────────────────┐
-│ ← Back to Trends                            │
-│                Research Copilot             │
-├──────────────────┬──────────────────────────┤
-│                  │                          │
-│  [Research Input │  📊 Research Insights   │
-│   Text Area]     │  ┌────────────────────┐ │
-│                  │  │ Topic Summary      │ │
-│  [Submit Button] │  │ "AI is transforming│ │
-│                  │  │  the landscape..." │ │
-│  ──────────────  │  └────────────────────┘ │
-│                  │  ┌────────────────────┐ │
-│                  │  │ Keywords           │ │
-│                  │  │ • Machine Learning │ │
-│                  │  │ • Neural Networks  │ │
-│                  │  │ • Generative AI    │ │
-│                  │  └────────────────────┘ │
-│                  │  ┌────────────────────┐ │
-│                  │  │ Video Angles       │ │
-│                  │  │ • Top 5 AI trends  │ │
-│                  │  │ • Future outlook   │ │
-│                  │  │ • Expert insights  │ │
-│                  │  └────────────────────┘ │
-│                  │  ┌────────────────────┐ │
-│                  │  │ Status            │ │
-│                  │  │ ✓ Complete        │ │
-│                  │  └────────────────────┘ │
-│                  │                          │
-└────────────────────────────────────────────┘
-```
+- Intelligent research input panel for natural language queries
+- AI-generated topic summaries with key insights
+- Extracted keywords and related concepts
+- Video angle suggestions for content creators
+- Real-time research status tracking
 
 ### Live Demo
 - **Homepage**: [https://Prasen2.github.io/TrendPulse/](https://Prasen2.github.io/TrendPulse/)
@@ -398,7 +329,7 @@ graph LR
    - **Type Safety**: Comprehensive TypeScript typing with Zod schema validation
    - **Component Architecture**: Designed clean, reusable components with clear separation of concerns
    - **Routing**: Implemented multi-page navigation with `react-router-dom`
-   - **Performance**: Optimized re-renders and state updates for smooth 60fps interactions
+   - **Performance**: Optimized re-renders and state updates for smooth interactions
 
 #### 3. **3D Web Development** 🌐
    - **Three.js Integration**: Learned WebGL basics for 3D graphics rendering
@@ -420,120 +351,255 @@ graph LR
 
 ---
 
-## 🔗 MCP & External APIs
+## 🔮 Future: MCP Integration with TrendPulse
 
-### Model Context Protocol (MCP) Integration
+### Why We're Adding MCP
 
-**TrendPulse is architected to integrate with MCP servers** for real-time data and external APIs:
+The **Model Context Protocol (MCP)** is the missing piece that will transform TrendPulse from a demo with simulated data into a **production-ready platform** with real-time intelligence:
+
+#### Problems MCP Solves
+
+1. **Data Source Abstraction**
+   - Current: Hard-coded fake data in `fakeHotspots.ts`, `fakeTrendData.ts`
+   - With MCP: Seamlessly switch between mock data, APIs, databases, and LLM-powered services
+   - **Benefit**: Single unified interface for all data sources
+
+2. **Decoupled Backend Services**
+   - Current: All logic lives in frontend React components
+   - With MCP: Separate backend services for trend detection, NLP analysis, and data aggregation
+   - **Benefit**: Scalable microservices architecture without rewriting frontend
+
+3. **Real-Time Intelligence Automation**
+   - Current: Tambo manages UI orchestration only
+   - With MCP: Tambo + MCP servers work together for intelligent data generation
+   - **Benefit**: AI-powered servers handle complex analysis while React handles UI
+
+4. **Tool-Based Extensibility**
+   - Current: Adding new data source requires code changes and redeployment
+   - With MCP: Add new tools/servers without touching the frontend
+   - **Benefit**: Plugins and extensions for trend detection, keyword extraction, etc.
+
+5. **Standard Integration Pattern**
+   - Current: Custom adapters for each API (if we add them)
+   - With MCP: Standard protocol for all integrations
+   - **Benefit**: Built-in tooling, debugging, and community support
+
+### How We'll Integrate MCP
+
+#### Phase 1: MCP Server Infrastructure
 
 ```typescript
-// Planned MCP Server Integration Points
-interface MCPIntegrationPoints {
-  // Real-time data sources
-  trendDataServer: "Connects to trend detection MCP",
-  socialMediaServer: "Aggregates Twitter/X, Reddit, YouTube data",
-  newsServer: "Integrates news APIs for current events tracking",
-  
-  // AI capabilities
-  nlpServer: "Processes natural language research queries",
-  summarizationServer: "Generates topic summaries",
-  keywordServer: "Extracts and ranks keywords",
+// Backend: MCP Servers for TrendPulse
+
+// 1. Trend Detection Server
+interface TrendMCPServer {
+  tools: {
+    "fetch_trending_topics": (
+      region: string,
+      category: string
+    ) => Promise<Hotspot[]>
+    
+    "analyze_trend_velocity": (
+      topicId: string,
+      timeRange: string
+    ) => Promise<VelocityMetrics>
+    
+    "get_platform_distribution": (
+      topic: string
+    ) => Promise<PlatformStats>
+  }
+}
+
+// 2. NLP & Research Server
+interface NLPMCPServer {
+  tools: {
+    "summarize_topic": (topic: string) => Promise<string>
+    "extract_keywords": (content: string) => Promise<string[]>
+    "generate_video_angles": (topic: string) => Promise<VideoAngle[]>
+  }
+}
+
+// 3. Data Aggregation Server
+interface AggregationMCPServer {
+  tools: {
+    "fetch_multi_source_trends": () => Promise<AggregatedTrends>
+    "sync_real_time_data": (source: string) => Promise<UpdatedTrends>
+  }
 }
 ```
 
-### Future External API Integrations
+#### Phase 2: Frontend Integration Layer
 
-1. **Trend Detection APIs**
-   - Google Trends API for search interest data
-   - Twitter/X API v2 for social conversations
-   - YouTube Data API for video engagement metrics
-   - Reddit API for community discussions
+```typescript
+// Frontend: tamboOrchestrator.ts adapts to use MCP
 
-2. **NLP & AI Services**
-   - OpenAI GPT API for intelligent summarization
-   - Anthropic Claude for research context
-   - Real-time language processing for keyword extraction
+import { ManagedResource } from '@modelcontextprotocol/sdk/client/index.d.ts';
 
-3. **News & Content APIs**
-   - NewsAPI for aggregated news sources
-   - MediaStack for global news coverage
-   - Webhose.io for alternative media sources
+export class TrendPulseMCPBridge {
+  private mcpClient: ManagedResource;
+  private trendServer: TrendMCPServer;
+  private nlpServer: NLPMCPServer;
+  
+  async initializeMCP() {
+    // Connect to MCP servers
+    this.trendServer = await this.connectToMCPServer('trend-detection');
+    this.nlpServer = await this.connectToMCPServer('nlp-processing');
+  }
+  
+  async submitIntent(intent: ResearchIntent, onUpdate: UpdateCallback) {
+    // Step 1: Use Trend Server to get current data
+    const trendContext = await this.trendServer.tools.fetch_trending_topics(
+      intent.region || 'global',
+      'all'
+    );
+    
+    // Step 2: Use NLP Server for analysis
+    const summary = await this.nlpServer.tools.summarize_topic(intent.query);
+    const keywords = await this.nlpServer.tools.extract_keywords(summary);
+    const angles = await this.nlpServer.tools.generate_video_angles(intent.query);
+    
+    // Step 3: Progressive updates through Tambo
+    onUpdate({ summaryText: summary });
+    onUpdate({ keywords });
+    onUpdate({ videoIdeas: angles });
+    onUpdate({ researchStatus: 'complete' });
+  }
+}
+```
 
-4. **Analytics Platforms**
-   - Google Analytics for website trends
-   - Similar Web for competitor trend tracking
-   - Chartbeat for real-time content analytics
+#### Phase 3: Gradual Data Source Migration
+
+```typescript
+// Migration Path: Fake Data → MCP Servers
+
+// TODAY: Simulated data
+const trendData = fakeTrendData(); // Returns fake data
+
+// PHASE 1: Adapter pattern
+const trendData = await mcpBridge.fetchTrendData(); // Uses MCP or falls back to fake
+
+// PHASE 2: Real APIs
+const trendData = await mcpBridge.fetchTrendData();
+// ↓ Uses MCP servers
+// ├── Google Trends API
+// ├── Twitter/X API v2
+// ├── YouTube Data API
+// └── Reddit API
+
+// PHASE 3: AI-Powered Generation
+const trendData = await mcpBridge.fetchTrendData();
+// ↓ MCP servers powered by LLMs
+// ├── Multi-source trend synthesis
+// ├── Pattern detection AI
+// └── Predictive trend analysis
+```
+
+### MCP Architecture in TrendPulse
+
+```mermaid
+graph TB
+    subgraph Client["Client (React + Tambo)"]
+        UI["React Components<br/>(UI rendering)"]
+        IO["TrendPulseMCPBridge<br/>(Integration layer)"]
+    end
+    
+    subgraph MCPLayer["MCP Protocol Layer"]
+        MCPC["MCP Client<br/>(Tambo orchestrator)"]
+    end
+    
+    subgraph Servers["MCP Servers (Backend)"]
+        TS["Trend Server<br/>(fetch, analyze trends)"]
+        NLP["NLP Server<br/>(summarize, keywords, angles)"]
+        AGG["Aggregation Server<br/>(multi-source data)"]
+    end
+    
+    subgraph DataSources["Real Data Sources"]
+        API1["Google Trends API"]
+        API2["Twitter/X API v2"]
+        API3["YouTube API"]
+        API4["Reddit API"]
+        LLM["OpenAI / Claude API"]
+    end
+    
+    UI --> IO
+    IO --> MCPC
+    MCPC --> TS
+    MCPC --> NLP
+    MCPC --> AGG
+    TS --> API1
+    TS --> API2
+    TS --> API3
+    TS --> API4
+    NLP --> LLM
+    AGG --> API1
+    AGG --> API2
+    AGG --> API3
+```
+
+### Benefits We'll Gain
+
+| Before MCP | After MCP |
+|---|---|
+| Fake data + demo only | Real-time professional platform |
+| Frontend handles all logic | Clean separation of concerns |
+| Hard to scale | Production-ready microservices |
+| Tightly coupled to one data source | Flexible, pluggable architecture |
+| Limited AI capabilities | Full LLM-powered intelligence |
+| Manual API integration work | Standard protocol, automatic tooling |
+
+### Timeline
+
+- **Phase 1 (Feb)**: Set up MCP servers infrastructure with basic trend fetching
+- **Phase 2 (Mar)**: Integrate MCP bridge into Tambo orchestrator
+- **Phase 3 (Apr)**: Connect real APIs (Google Trends, Twitter/X, YouTube)
+- **Phase 4 (May)**: Add LLM-powered NLP servers for advanced analysis
+- **Phase 5 (Jun)**: Full production deployment with real data
 
 ---
 
-## 🎯 Real Data Integration Strategy
+## 🔌 Real API Integrations (Powered by MCP)
 
-### Current State: Simulated Data
-TrendPulse currently uses **fake data generation** to demonstrate architecture:
+Once MCP servers are operational, TrendPulse will connect to:
+
+### Trend Detection APIs
+- **Google Trends API** - Search interest data and trending searches
+- **Twitter/X API v2** - Real-time social conversations and engagement
+- **YouTube Data API** - Video trends and view metrics
+- **Reddit API** - Community discussions and upvotes
+
+### AI & NLP Services
+- **OpenAI GPT-4** - Topic summarization and analysis
+- **Anthropic Claude** - Deep research context generation
+- **Hugging Face Models** - Real-time keyword extraction
+
+### News & Content Aggregation
+- **NewsAPI** - Aggregated news from 40,000+ sources
+- **MediaStack** - Global news coverage and historical data
+- **Webhose.io** - Alternative media and blog sources
+
+### Analytics Platforms
+- **Google Analytics API** - Website trend tracking
+- **SimilarWeb** - Competitor trend intelligence
+- **Chartbeat** - Real-time news analytics
+
+---
+
+## 📊 Current State: Simulated Data
+
+TrendPulse currently uses **fake data generation** to demonstrate the architecture and validate the Tambo AI orchestration pattern:
 
 ```typescript
-// Fake data sources
+// Current fake data sources
 ├── fakeHotspots.ts         // Simulated globe markers
 ├── fakeTrendData.ts         // Simulated trend metrics
 └── fakeResearchData.ts      // Simulated research results
 ```
 
-### Integration Roadmap
-
-#### Phase 1: API Adaptation Layer
-```typescript
-// Create adapter pattern for easy API switching
-interface TrendDataSource {
-  fetchHotspots(): Promise<Hotspot[]>;
-  fetchTrendMetrics(): Promise<TrendMetrics>;
-  fetchResearchInsights(query: string): Promise<ResearchInsights>;
-}
-
-// Current: Fake implementation
-class FakeTrendDataSource implements TrendDataSource { ... }
-
-// Future: Real API implementation
-class RealTrendDataSource implements TrendDataSource { ... }
-```
-
-#### Phase 2: MCP Server Integration
-```typescript
-// Connect to MCP servers for real-time data
-async function initializeMCPConnections() {
-  const trendServer = await connectToMCP('trends');
-  const nlpServer = await connectToMCP('nlp-processing');
-  
-  // Subscribe to real-time updates
-  trendServer.onUpdate((trends) => updateGlobalTrendState(trends));
-  nlpServer.onComplete((insights) => updateResearchState(insights));
-}
-```
-
-#### Phase 3: API Orchestration
-```typescript
-// Tambo-orchestrated real data flow
-async function orchestrateRealData(query: string) {
-  // 1. Fetch real trends from APIs
-  const trends = await trendAPI.search(query);
-  
-  // 2. Process through MCP/AI servers
-  const analysis = await nlpServer.analyze(trends);
-  
-  // 3. Orchest rate component updates
-  updateUI({
-    trends: trends,
-    summary: analysis.summary,
-    keywords: analysis.keywords,
-    videoAngles: analysis.suggestions,
-  });
-}
-```
-
-### Real Data Benefits
-- ✅ **Live Trends**: Real-time trend data from multiple sources
-- ✅ **AI Intelligence**: Actual AI-powered summarization and insights
-- ✅ **Creator Value**: Actionable, data-backed recommendations
-- ✅ **Scalability**: Support for monitoring thousands of concurrent trends
+This foundation enables:
+- ✅ **Architecture Validation**: Proves the Tambo orchestration pattern works
+- ✅ **UI/UX Development**: Allows rapid iteration on components
+- ✅ **Performance Testing**: Tests 100+ concurrent updates without API limits
+- ✅ **MCP Planning**: Clear data contracts for future backend services
 
 ---
 
@@ -586,41 +652,6 @@ npm run deploy
 
 ---
 
-## 📁 Project Structure
-
-```
-TrendPulse/
-├── src/
-│   ├── components/           # React components
-│   │   ├── TrendPulsePage1.tsx
-│   │   ├── ResearchCopilotPage.tsx
-│   │   ├── GlobeContainer.tsx
-│   │   └── ...panels
-│   ├── lib/
-│   │   ├── tambo.ts          # Tambo component registry
-│   │   ├── tamboOrchestrator.ts  # Intent processing
-│   │   ├── fakeHotspots.ts
-│   │   ├── fakeTrendData.ts
-│   │   └── fakeResearchData.ts
-│   ├── types/                # TypeScript types
-│   │   ├── hotspot.ts
-│   │   ├── keyword.ts
-│   │   ├── trendData.ts
-│   │   └── videoAngle.ts
-│   ├── styles/               # CSS styles
-│   │   ├── trendPanels.css
-│   │   ├── researchCopilot.css
-│   │   └── ...
-│   ├── App.tsx               # Main app component
-│   └── main.tsx              # Entry point
-├── package.json
-├── tsconfig.json
-├── vite.config.js
-└── README.md
-```
-
----
-
 ## 🤝 Contributing
 
 We welcome contributions! Please follow these guidelines:
@@ -633,11 +664,6 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
-
----
 
 ## 📞 Support & Contact
 
