@@ -1,0 +1,1 @@
+import{_ as a,M as n}from"./index-B6vkcAOa.js";async function r(){try{const{toJsonSchema:t}=await a(async()=>{const{toJsonSchema:o}=await import("./standard-json_false-CVlvIKuz.js");return{toJsonSchema:o}},[]);return t}catch{throw new n("@valibot/to-json-schema")}}export{r as default};
